@@ -19,22 +19,13 @@ import StudentList from "../pages/students/StudentList";
 import SubjectList from "../pages/subjects/SubjectList";
 import ClassroomList from "../pages/classrooms/ClassroomList";
 import TimeSlotList from "../pages/timeslots/TimeSlotList";
-
-/* Faculty Allocation */
+import FacultyAvailabilityList from "../pages/facultyAvailability/FacultyAvailabilityList";/* Faculty Allocation */
 import AllocationList from "../pages/allocations/AllocationList";
-
-/* Timetable */
-//import TimetableList from "../pages/timetables/TimetableList";
-
-/* Automatic Timetable Generation */
-import GenerateTimetable from "../pages/timetable-generation/GenerateTimetable";
-
-/*
- * Reports
- *
- * Uncomment this import after creating ReportsPage.jsx
- */
-// import ReportsPage from "../pages/reports/ReportsPage";
+import SubjectWorkloadList from "../pages/subjectWorkload/SubjectWorkloadList";
+import HolidayList from "../pages/holidays/HolidayList";
+import ConstraintList from "../pages/constraints/ConstraintList";
+import TimetableGenerationPage from "../pages/timetableGeneration/TimetableGenerationPage";
+import TimetableView from "../pages/timetable/TimetableView";
 
 const AppRoutes = () => {
 
@@ -177,7 +168,7 @@ const AppRoutes = () => {
             />
 
             {/* ================= TIMETABLE GENERATION ================= */}
-
+{/* 
             <Route
                 path="/timetable-generation"
                 element={
@@ -185,31 +176,61 @@ const AppRoutes = () => {
                         <GenerateTimetable />
                     </ProtectedRoute>
                 }
-            />
-
-            {/* ================= VIEW TIMETABLE ================= */}
-
-            {/* <Route
-                path="/timetables"
-                element={
-                    <ProtectedRoute role="ROLE_ADMIN">
-                        <TimetableList />
-                    </ProtectedRoute>
-                }
             /> */}
 
-            {/* ================= REPORTS ================= */}
-
-            {/*
             <Route
-                path="/reports"
+                path="/faculty-availability"
                 element={
                     <ProtectedRoute role="ROLE_ADMIN">
-                        <ReportsPage />
+                        <FacultyAvailabilityList />
                     </ProtectedRoute>
                 }
             />
-            */}
+
+            <Route
+                path="/subject-workloads"
+                element={
+                    <ProtectedRoute role="ROLE_ADMIN">
+                        <SubjectWorkloadList />
+                    </ProtectedRoute>
+                }
+            />
+
+            <Route
+                path="/holidays"
+                element={
+                    <ProtectedRoute role="ROLE_ADMIN">
+                        <HolidayList />
+                    </ProtectedRoute>
+                }
+            />
+
+            <Route
+                path="/constraints"
+                element={
+                    <ProtectedRoute role="ROLE_ADMIN">
+                        <ConstraintList />
+                    </ProtectedRoute>
+                }
+            />
+
+            <Route
+                path="/timetable-generation"
+                element={
+                    <ProtectedRoute role="ROLE_ADMIN">
+                        <TimetableGenerationPage />
+                    </ProtectedRoute>
+                }
+            />
+
+            <Route
+                path="/timetable-view"
+                element={
+                    <ProtectedRoute role="ROLE_ADMIN">
+                        <TimetableView />
+                    </ProtectedRoute>
+                }
+            />
 
         </Routes>
 

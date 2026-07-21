@@ -10,8 +10,12 @@ import MeetingRoomIcon from "@mui/icons-material/MeetingRoom";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
 import AssignmentIndIcon from "@mui/icons-material/AssignmentInd";
 import TableChartIcon from "@mui/icons-material/TableChart";
-import AutoFixHighIcon from "@mui/icons-material/AutoFixHigh";
 import LogoutIcon from "@mui/icons-material/Logout";
+import ScheduleIcon from "@mui/icons-material/Schedule";
+import WorkHistoryIcon from "@mui/icons-material/WorkHistory";
+import EventBusyIcon from "@mui/icons-material/EventBusy";
+import RuleIcon from "@mui/icons-material/Rule";
+import AutoFixHighIcon from "@mui/icons-material/AutoFixHigh";
 
 const menuItems = [
 
@@ -90,17 +94,41 @@ const menuItems = [
     },
 
     {
-        text: "Timetables",
-        icon: <TableChartIcon />,
-        path: "/timetables"
+        text: "Faculty Availability",
+        icon: <ScheduleIcon />,
+        path: "/faculty-availability"
     },
 
     {
-        text: "Timetable Generation",
-        icon: <AutoFixHighIcon />,
-        path: "/timetable-generation"
+    text: "Subject Workload",
+    icon: <WorkHistoryIcon />,
+    path: "/subject-workloads"
     },
 
+    {
+    text: "Holidays",
+    icon: <EventBusyIcon />,
+    path: "/holidays"
+    },
+
+    {
+    text: "Timetable Constraints",
+    icon: <RuleIcon />,
+    path: "/constraints"
+    },
+
+    {
+    text: "Generate Timetable",
+    icon: <AutoFixHighIcon />,
+    path: "/timetable-generation"
+    },
+
+    {
+    text: "Timetable View",
+    icon: <TableChartIcon />,
+    path: "/timetable-view"
+    },
+    
     {
         header: "ACCOUNT"
     },
